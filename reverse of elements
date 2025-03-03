@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr[size],index;
+    for(index=0;index<size;index++)
+    {
+        scanf("%d",&arr[index]);
+    }
+    int start=0,end=size-1;
+    while(start<end)
+    {
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+    }
+    for(index=0;index<size;index++)
+    {
+        printf("%d ",arr[index]);
+    }
+}
